@@ -1,29 +1,27 @@
 # Task 1 Привести к целому типу -1.6, 2.99
 
 number_1 = 1.6
-print(round(number_1, 0))
+print(int(number_1))
 number_2 = 2.99
-print(round(number_2, 0))
+print(int(number_2))
 
 # Task 2 Заменить символ “#” на символ “/” в строке 'www.my_site.com#about'
 
 string = "www.my_site.com#about"
-string_1 = string.replace( "#", "/")
+string_1 = string.replace("#", "/")
 print(string_1)
 
 # Task 3 Напишите программу, которая добавляет ‘ing’ к слову ‘stroka’
 
 word = "stroka"
-
-def myProgram ():
-    print(word + "ing")
-
-myProgram()
+print(word + "ing")
 
 # Task 4 В строке “Ivanou Ivan” поменяйте местами слова => "Ivan Ivanou"
 
 a = "Ivanou Ivan"
-print(a[7:11] + " " + a[0:6])
+last_name, first_name = a.split()
+updated_name = " ".join([first_name, last_name])
+print(updated_name)
 
 # Task 5 Напишите программу которая удаляет пробел в начале, в конце строки
 
@@ -36,16 +34,16 @@ print(text_trimmed)
 # классах (например, 1а, 1б, 2б, 6а, 7в и т.д.).
 
 dict = {
-"1a": 15,
-"1b": 16,
-"2a": 19,
-"2d": 24,
-"2b": 19,
-"3a": 15,
-"3b": 17,
-"3c": 21,
-"4a": 17,
-"4b": 21
+    "1a": 15,
+    "1b": 16,
+    "2a": 19,
+    "2d": 24,
+    "2b": 19,
+    "3a": 15,
+    "3b": 17,
+    "3c": 21,
+    "4a": 17,
+    "4b": 21
 }
 print(dict)
 
@@ -65,6 +63,4 @@ if b in a:
 # 9. Вывести нужные символы
 
 x = "My name is Agent Smith"
-print(x[1])
-y = x.lower()
-print(y[3:7:3] + y[17] + y[12:16:3])
+print(x[3] + x[6] + x[9] + x[12] + x[15])
