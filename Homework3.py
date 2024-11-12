@@ -63,4 +63,5 @@ if b in a:
 # 9. Вывести нужные символы
 
 x = "My name is Agent Smith"
-print(x[3] + x[6] + x[9] + x[12] + x[15])
+print(x[1])
+print(x[3:16:3])
