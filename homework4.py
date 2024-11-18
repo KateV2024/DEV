@@ -37,8 +37,8 @@ print(var_float)
 #  конца. Измерьте длину вашей строки.
 
 str1 = "We process data"
-print(str1[1])
-print(str1[14])
+print(str1[0])
+print(str1[-1])
 print(str1[3])
 print(str1[-3])
 print(len(str1))
@@ -277,11 +277,11 @@ if int_unit == 1:
     print("1 кг")
 elif int_unit == 2:
     print("0.000002 кг")
-elif x == 3:
+elif int_unit == 3:
     print("0.003 кг")
-elif x == 4:
+elif int_unit == 4:
     print("4000 кг")
-elif x == 5:
+elif int_unit == 5:
     print("500000 кг")
 else:
     print("Wrong number")
@@ -326,12 +326,13 @@ print("Количество отрицательных чисел:", count_negat
 #  заплыва среди 6 участников.
 
 participants = {
-"Бекиш Александр": 21.07,
-"Будник Алексей": 20.34,
-"Гребень Анастасия": 22.12,
-"Давидович Татьяна": 30,
-"Дешук Дмитрий": 24.01,
-"Казак Анна": 28.17}
+    "Бекиш Александр": 21.07,
+    "Будник Алексей": 20.34,
+    "Гребень Анастасия": 22.12,
+    "Давидович Татьяна": 30,
+    "Дешук Дмитрий": 24.01,
+    "Казак Анна": 28.17
+}
 
 best_result = min(participants.values())
 print(best_result)
@@ -395,6 +396,4 @@ N = int(input("Enter N: "))
 i = 0
 while (N + i)* 2 != M + i:
     i += 1
-    print((M + i))
-    print((N + i))
     print(i)
