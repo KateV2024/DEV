@@ -1,14 +1,12 @@
 # Напищите программу, которая заменит символ “#” на символ “/” в строке 'www.my_site.com#about'
-from tomlkit import value
 
+def replace_element(word1):
+    word1 = word1.replace("#", "/")
+    return word1
 
-def replace_element(a):
-    a = a.replace( "#", "/")
-    return a
-
-a = "www.my_site.com#about"
-new_a = replace_element(a)
-print(new_a)
+word1 = "www.my_site.com#about"
+new_word = replace_element(word1)
+print(new_word)
 
 # Напишите программу, которая добавляет ‘ing’ к слову ‘stroka’
 
@@ -22,20 +20,20 @@ print(result)
 
 # В строке “Ivanou Ivan” поменяйте местами слова => "Ivan Ivanou"
 
-def change_place(b):
-    last_name, first_name = b.split()
+def change_place(surname_name):
+    last_name, first_name = surname_name.split()
     updated_name = " ".join([first_name, last_name])
     return updated_name
 
-b = "Иванов Иван"
-new_name = change_place(b)
+surname_name = "Иванов Иван"
+new_name = change_place(surname_name)
 print(new_name)
 
 # Вывести входит ли строка1 в строку2 (пример: employ и employment )
 
 def str1_included_in_str2(str1, str2):
     if str1 in str2:
-        return True
+        return str1 in str2
     else:
         return False
 
