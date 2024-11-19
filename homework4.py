@@ -286,27 +286,27 @@ elif int_unit == 5:
 else:
     print("Wrong number")
 
- # Цикл for
- # 1. Даны два целых числа A и B (A < B). Найти сумму всех целых чисел от A до B включительно.
+#  # Цикл for
+#  # 1. Даны два целых числа A и B (A < B). Найти сумму всех целых чисел от A до B включительно.
 
 A = int(input("Введите А: "))
 B = int(input("Введите B: "))
 sum = 0
 for i in range(A, B + 1):
-    sum += i
-    print(sum)
+    sum += 1
+print(sum)
 
- # 2. Найти сумму всех натуральных чисел в от A до B
+#  # 2. Найти сумму всех натуральных чисел в от A до B
 
 A1 = int(input("Введите А1: "))
 B1 = int(input("Введите B1: "))
 sum1 = 0
 for i in range(A1, B1):
     sum1 += i
-    print(sum1)
+print(sum1)
 
- # 3. Найти произведение положительных, сумму и количество отрицательных
- # из 10 введенных целых значений.
+#  # 3. Найти произведение положительных, сумму и количество отрицательных
+#  # из 10 введенных целых значений.
 
 product_positive = 1
 sum_negative = 0
@@ -337,11 +337,11 @@ participants = {
 best_result = min(participants.values())
 print(best_result)
 
-min_value = float("Inf")
-for value in participants.values():
-    if value < min_value:
-        min_value = value
-print(min_value)
+# min_value = float("Inf")
+# for value in participants.values():
+#     if value < min_value:
+#         min_value = value
+# print(min_value)
 
 # Напишите программу, которая будет выводить уникальное число
 
@@ -351,8 +351,8 @@ for num in ar:
     unique_number ^= num
 print(unique_number)
 
-# Цикл while
-# Дано число N. Найти произведение всех чисел от 0 до N.
+# # Цикл while
+# # Дано число N. Найти произведение всех чисел от 0 до N.
 
 N = int(input("Enter the number: "))
 mltpl = 1
@@ -372,7 +372,8 @@ while S1  >= S2 * 0.1:
     S1 = 2 * S1
     S2 = 3 * S2
     i += 1
-    print(i)
+
+print(i)
 
 # Дано целое число R (>0). Используя операции деления нацело и взятия
 #  остатка от деления, найти количество и сумму его цифр.
@@ -383,10 +384,11 @@ tseloe = 0
 while R > 0 :
     tseloe = R // 10
     ostatok = R % 10
-    print(tseloe)
-    print(ostatok)
-    print(ostatok + tseloe)
     break
+
+print(tseloe)
+print(ostatok)
+print(ostatok + tseloe)
 
 # Деду M лет, а внуку N лет. Через сколько лет дед станет вдвое старше
 #  внука.  И сколько при этом лет будет деду и внуку.
@@ -396,4 +398,6 @@ N = int(input("Enter N: "))
 i = 0
 while (N + i)* 2 != M + i:
     i += 1
-    print(i)
+print(i)
+print(N + i)
+print(M + i)
