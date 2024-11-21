@@ -8,7 +8,8 @@ def undentify_digit(file):
     numbers = []
     with open("test.txt", "r") as file:
         for line in file:
-            for char in line:
+            my_list = line.split(", ")
+            for char in my_list:
                 if char.isdigit():
                     num = int(char)
                     numbers.append(num)
