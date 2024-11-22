@@ -3,9 +3,14 @@
 # же порядке). Если четные или нечетные числа в исходном файле
 # отсутствуют, то соответствующий результирующий файл оставить пустым.
 
-def undentify_digit(file):
+def identify_digits(file):
     numbers = []
-    with open("test.txt", "r") as file:
+
+    with open(file, "r") as file:
+
+        even_numbers = []
+        odd_numbers = []
+
         for line in file:
             my_list = line.split(", ")
             for char in my_list:
@@ -13,16 +18,19 @@ def undentify_digit(file):
                     num = int(char)
                     numbers.append(num)
                     if num % 2 == 0:
-                        with open("result2.txt", "a") as file2:
-                            file2.write(str(num))
+                        even_numbers.append(num)
                     else:
-                        with open("result1.txt", "a") as file1:
-                            file1.write(str(num))
+                        odd_numbers.append(num)
+
+    with open("result2.txt", "w") as file2:
+        file2.write(", ".join(map(str, even_numbers)) + "\n")
+
+    with open("result1.txt", "w") as file1:
+        file1.write(", ".join(map(str, odd_numbers)) + "\n")
 
     return numbers
 
+
 file = "test.txt"
-result = undentify_digit(file)
-print(result)
-
-
+result = identify_digits(file)
+print(", ".join(map(str, result)))

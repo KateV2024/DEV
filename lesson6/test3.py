@@ -11,6 +11,11 @@ def find_squared_numbers(file):
                     squared_numbers.append(num ** 2)
     return squared_numbers
 
+
+
 file = "test.txt"
 result = find_squared_numbers(file)
 print(result)
+
+with open("test.txt", "w") as file:
+    file.write(", ".join(map(str, result)))
