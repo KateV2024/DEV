@@ -4,10 +4,7 @@
 func = lambda name: f"Hello, {name}"
 
 def find_name(names):
-    greetings = [ ]
-    for name in names:
-        greetings.append(func(name))
-    return greetings
+    return [f"Hello, {name}" for name in names]
 
 names = {"Sveta", "Sasha", "Kate"}
 new_list = find_name(names)

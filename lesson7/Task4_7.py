@@ -11,12 +11,12 @@ def word_lengths(sentence):
     word_lengths = []
     for word in words:
         try:
-            if word == "the":
+            if word.startswith("the"):
                 raise BaseException
+            word_lengths.append(len(word))
         except:
                 print("the is found")
-        finally:
-            word_lengths.append(len(word))
+
     return word_lengths
 
 sentence = "thequick brown fox jumps over the lazy dog"
