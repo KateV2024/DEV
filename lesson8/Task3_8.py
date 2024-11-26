@@ -15,12 +15,14 @@ number_names = {
     11: "Eleven",
     12: "Twelve",
     13: "Thirteen",
-    14: "Fourteen"
+    14: "Fourteen",
+    15: "Fifteen"
  }
 
 numbers = {1, 2, 6, 8, 9, 11}
 def find_sorting(numbers):
     numbers1 = sorted(numbers, key = lambda value: number_names[value])
+
     return numbers1
 
 res = find_sorting(numbers)

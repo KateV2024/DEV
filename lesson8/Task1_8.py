@@ -1,12 +1,13 @@
 # Написать функцию для факторила, генератор и рекурсию и сравнить время их работы
 
-import time
 import math
+import time
+import datetime
 
 
 # Рекурсия
 
-start_time = time.monotonic_ns()
+start_time = datetime.datetime.now()
 
 def factorial(n):
     if n == 0:
@@ -16,23 +17,22 @@ def factorial(n):
 
 print(factorial(5))
 
-end_time = time.monotonic_ns()
+end_time = datetime.datetime.now()
 rekursia_time = end_time - start_time
-print(f"Время исполнения рекурсии в наносекундах: ", {rekursia_time})
+print(f"Время исполнения рекурсии в микросекундах: ", rekursia_time)
 
 # Импорт
 
-start_time_import = time.monotonic_ns()
-
+start_time_import = datetime.datetime.now()
 math.factorial(5)
 
-end_time_import = time.monotonic_ns()
+end_time_import = datetime.datetime.now()
 import_time_execution = end_time_import - start_time_import
-print(f"Время исполнения импорта в наносекундах: ", {import_time_execution})
+print(f"Время исполнения импорта в микросекундах: ", import_time_execution)
 
 # Функция
 
-start_time_func = time.monotonic_ns()
+start_time_func = datetime.datetime.now()
 
 number = 5
 def factorial(number):
@@ -44,13 +44,13 @@ def factorial(number):
 result = factorial(number)
 print(result)
 
-end_time_func = time.monotonic_ns()
+end_time_func = datetime.datetime.now()
 def_time_execution = end_time_func - start_time_func
-print(f"Время исполнения функции в наносекундах: ", {def_time_execution})
+print(f"Время исполнения функции в микросекундах: ", def_time_execution)
 
 # Генератор
 
-start_time_gen = time.monotonic_ns()
+start_time_gen = datetime.datetime.now()
 
 def generator():
     factorial = 1
@@ -65,9 +65,9 @@ for number in result_1:
     print(number)
 
 
-end_time_gen = time.monotonic_ns()
+end_time_gen = datetime.datetime.now()
 gen_time_execution = end_time_gen - start_time_gen
-print(f"Время исполнения генератора в наносекундах: ", {gen_time_execution})
+print(f"Время исполнения генератора в микросекундах: ", gen_time_execution)
 
 # Найти лучший результатов экзекьюшена
 

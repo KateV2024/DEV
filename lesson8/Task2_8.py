@@ -3,8 +3,10 @@
 
 def typed(func):
     def wrapper(a, b):
-        a = str(a)
-        b = str(b)
+        if not isinstance(a, str):
+            a = str(a)
+        if not isinstance(b, str):
+            b = str(b)
         return func(a, b)
     return wrapper
 
@@ -18,9 +20,12 @@ print(add_two_symbols("a", "b")) # "ab"
 
 def typed(func):
     def wraper(a, b, c):
-        a = float(a)
-        b = float(b)
-        c = float(c)
+        if not isinstance(a, float):
+            a = float(a)
+        if not isinstance(b, float):
+            b = float(b)
+        if not isinstance(c, float):
+            c = float(c)
         return func(a, b, c)
     return wraper
 
