@@ -36,7 +36,6 @@ class Flower(ABC):
         """Возвращает строковое представление цветка."""
         pass
 
-
 class Rose(Flower):
     def __str__(self):
         return f"Rose(name={self.name}, cost={self.cost}, lifespan={self.lifespan}h)"
@@ -128,7 +127,8 @@ if __name__ == "__main__":
     bouquet.add_accessory(ribbon)
     bouquet.add_accessory(paper)
 
-    # Вывод букета
+    # Вывод
+
     print(bouquet)
 
     # Стоимость букета
