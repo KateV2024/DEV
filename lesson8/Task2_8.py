@@ -1,39 +1,39 @@
-# Напишите декоратор, который проверял бы тип параметров функции,
-# конвертировал их если надо и складывал
+# Создать декоратор
 
-def typed(func):
-    def wrapper(a, b):
-        if not isinstance(a, str):
-            a = str(a)
-        if not isinstance(b, str):
-            b = str(b)
-        return func(a, b)
-    return wrapper
+def typed(type):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            new_args = []
 
-@typed
-def add_two_symbols(a, b):
-    return a + b
+            if type == "str":
+                check_type = str
+            elif type == "int":
+                check_type = int
+            elif type == "float":
+                check_type = float
 
-print(add_two_symbols("3", 5))  # "35"
-print(add_two_symbols(5, 5))    # "55"
-print(add_two_symbols("a", "b")) # "ab"
+            for arg in args:
+                if isinstance(arg, check_type):
+                    new_args.append(arg)
+                else:
+                    new_args.append(check_type(arg))
 
-def typed(func):
-    def wraper(a, b, c):
-        if not isinstance(a, float):
-            a = float(a)
-        if not isinstance(b, float):
-            b = float(b)
-        if not isinstance(c, float):
-            c = float(c)
-        return func(a, b, c)
-    return wraper
+            return func(*new_args, **kwargs)
+        return wrapper
+    return decorator
 
-@typed
-def add_three_symbols(a,b,c):
-    return a + b + c
+@typed(type="str")
+def foo_str(*args, **kwargs):
+    return "".join(args)
 
-print(add_three_symbols(5, 6, 7)) # 18
-print(add_three_symbols("3", 5, 0)) # 8
-print(add_three_symbols(0.1, 0.2, 0.3)) # 0.7000000001 ??
-    
+print(foo_str("3", 5))  # "35"
+print(foo_str(5, 5))  # "55"
+print(foo_str("a", "b"))  # "ab"
+
+@typed(type="float")
+def foo_float(*args, **kwargs):
+    return sum(args)
+
+print(foo_float(5, 6, 7))  # 18.0
+print(foo_float("3", 5, 0))  # 8.0
+print(foo_float(0.1, 0.2, 0.3))  # 0.6
