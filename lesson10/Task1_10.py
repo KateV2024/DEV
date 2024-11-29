@@ -128,7 +128,8 @@ if __name__ == "__main__":
     bouquet.add_accessory(ribbon)
     bouquet.add_accessory(paper)
 
-    # Вывод букета
+    # Вывод
+
     print(bouquet)
 
     # Стоимость букета
