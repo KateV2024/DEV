@@ -46,7 +46,6 @@ class Tulip(Flower):
     def __str__(self):
         return f"Tulip {super().__str__()}"
 
-
 class Daisy(Flower):
     def __str__(self):
         return (f"Daisy {super().__str__()}")
