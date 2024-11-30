@@ -49,11 +49,7 @@ class Tulip(Flower):
 
 class Daisy(Flower):
     def __str__(self):
-        return (f"Daisy"
-                f""
-                f""
-                f"{super().__str__()}")
-
+        return (f"Daisy {super().__str__()}")
 
 class Accessory:
     """Класс для аксессуаров."""
