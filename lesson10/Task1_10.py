@@ -70,7 +70,6 @@ class Accessory:
     def __str__(self):
         return f"Accessory(name={self.name}, cost={self.cost})"
 
-
 class Bouquet:
     """Класс для букета."""
 
