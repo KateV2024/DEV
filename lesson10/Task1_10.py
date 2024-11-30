@@ -39,17 +39,20 @@ class Flower(ABC):
 
 class Rose(Flower):
     def __str__(self):
-        return f"Rose(name={self.name}, cost={self.cost}, lifespan={self.lifespan}h)"
+        return f"Rose {super().__str__()}"
 
 
 class Tulip(Flower):
     def __str__(self):
-        return f"Tulip(name={self.name}, cost={self.cost}, lifespan={self.lifespan}h)"
+        return f"Tulip {super().__str__()}"
 
 
 class Daisy(Flower):
     def __str__(self):
-        return f"Daisy(name={self.name}, cost={self.cost}, lifespan={self.lifespan}h)"
+        return (f"Daisy"
+                f""
+                f""
+                f"{super().__str__()}")
 
 
 class Accessory:
