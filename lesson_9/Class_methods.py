@@ -10,6 +10,7 @@ class Math_operations:
 print(Math_operations.add(3, 5))
 print(Math_operations.multiply(3, 5))
 
+
 # Example 2
 
 class BankAccount:

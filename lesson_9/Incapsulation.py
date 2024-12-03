@@ -1,15 +1,11 @@
 class Student:
-    def __init__(self, name, grade):
-        self._name = name
-        self.__grade = grade
+    __country = "Belarus"
 
-    @property
-    def grade(self):
-        return (f"received {self.__grade}")
+    def __bank_account(self):
+        print ("Мы не можем предоставить личную информацию")
 
-
-student = Student("Alice", "85")
-print(student._name, student.grade)  # Output: 85
-student._name = "Kate"
-student.__grade = "78"
-print(student._name, student.grade)
+    def country_of_birth(self):
+        print("Наш студент родом из ", Student.__country)
+pupil = Student()
+pupil.country_of_birth()
+pupil.__bank_account()
