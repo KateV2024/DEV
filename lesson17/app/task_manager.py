@@ -5,7 +5,7 @@ class TaskManager:
 
     def add_task(self, name, priority="normal"):
         """
-        Добавляет задачу в список.
+        До бавляет задачу в список.
 
         :param name: Название задачи
         :param priority: Приоритет задачи ('low', 'normal', 'high')

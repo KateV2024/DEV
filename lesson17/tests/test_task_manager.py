@@ -11,7 +11,6 @@ def test_add_task_and_set_priority(task_manager):
     add_task_and_set_priority.add_task('TASK1', 'normal')
     add_task_and_set_priority.add_task('task2', 'low')
     add_task_and_set_priority.add_task('Task3', 'high')
-
     assert len(add_task_and_set_priority.tasks) == 3
 
 def test_raising_error_for_invalid_priority(task_manager):
